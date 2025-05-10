@@ -9647,6 +9647,10 @@
                     "maxLength": 65535,
                     "minLength": 6
                 },
+                "origin_link": {
+                    "description": "origin link",
+                    "type": "string"
+                },
                 "tags": {
                     "description": "tags",
                     "type": "array",

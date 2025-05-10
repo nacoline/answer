@@ -340,14 +340,13 @@ func (qs *QuestionService) AddQuestion(ctx context.Context, req *schema.Question
 	question.AcceptedAnswerID = "0"
 	question.LastAnswerID = "0"
 	question.LastEditUserID = "0"
-	//question.PostUpdateTime = nil
 	question.Status = entity.QuestionStatusPending
 	question.RevisionID = "0"
 	question.CreatedAt = now
 	question.PostUpdateTime = now
 	question.Pin = entity.QuestionUnPin
 	question.Show = entity.QuestionShow
-	//question.UpdatedAt = nil
+	question.OriginLink = req.OriginLink
 	err = qs.questionRepo.AddQuestion(ctx, question)
 	if err != nil {
 		return

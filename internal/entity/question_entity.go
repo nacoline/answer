@@ -74,6 +74,7 @@ type Question struct {
 	PostUpdateTime   time.Time `xorm:"post_update_time TIMESTAMP"`
 	RevisionID       string    `xorm:"not null default 0 BIGINT(20) revision_id"`
 	LinkedCount      int       `xorm:"not null default 0 INT(11) linked_count"`
+	OriginLink       string    `xorm:"not null default '' VARCHAR(255) origin_link"`
 }
 
 // TableName question table name

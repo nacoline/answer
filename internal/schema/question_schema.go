@@ -86,6 +86,8 @@ type QuestionAdd struct {
 	Tags []*TagItem `validate:"required,dive" json:"tags"`
 	// user id
 	UserID string `json:"-"`
+	// origin link
+	OriginLink string `json:"origin_link"`
 	QuestionPermission
 	CaptchaID   string `json:"captcha_id"` // captcha_id
 	CaptchaCode string `json:"captcha_code"`
